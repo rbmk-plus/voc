@@ -63,8 +63,10 @@ Inside vim when you have cursor on the first letter `M` of `Module.Procedure`, d
 `v 3e <C-]>`    *(visually select the fully qualified name)*  
 module definition:  
 `<C-]>`  
-To come back:  
-`<C-o>`
+To come back in history:  
+`<C-o>`  
+To go forward in history
+`<C-i>`  
 
 Putting cursor on `P` of `Module.Procedure` is not guaranteed to resolve correctly to the correct module, so choose the fully qualified name. This is a [known limitation](https://docs.ctags.io/en/latest/man/ctags-faq.7.html#how-do-i-jump-to-the-tag-i-want-instead-of-the-wrong-one-by-the-same-name) of `ctags` (any suggestions for handling this better are welcome).
 
@@ -72,8 +74,9 @@ To address this, you can visually select as in the above examples, or resolve am
 `g <C-]>`  
 `:ts Write`  
 `:ts Platform.Write`  
+(intuitively, you select one of the choices presented in numbers)  
 or make vim see the qualified name as a complete keyword:  
-`iskeyword+=.`  
+`set iskeyword+=.`  
 in `.vimrc`  
 `autocmd FileType oberon,modula2 setlocal iskeyword+=.`  
 
