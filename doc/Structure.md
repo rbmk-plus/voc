@@ -1,5 +1,7 @@
 ## Structure of the compiler
 
+*OP means Oberon Portable*
+
 - Modules in `/src/compiler/`
     - Compiler - entry point
     - OPS - Scanner
@@ -9,7 +11,7 @@
     - OPT - Symbol Table
     - OPC - C source code generator version
     - OPM - C code generation constants
-    - extTools
+    - extTools  
 
 dependency tree as of   
 > commit 71488ffe850fa01832ef94fa14af777b2c7a917a  
